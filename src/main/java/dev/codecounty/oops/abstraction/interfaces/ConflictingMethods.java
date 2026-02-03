@@ -1,5 +1,15 @@
 package dev.codecounty.oops.abstraction.interfaces;
 
+
+
+
+
+public class ConflictingMethods {
+}
+
+//public class MyClass2 {}
+
+
 interface InterfaceA {
     default void sayHello() {
         System.out.println("Hello from A");

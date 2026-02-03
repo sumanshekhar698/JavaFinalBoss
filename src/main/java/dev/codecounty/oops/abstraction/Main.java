@@ -1,5 +1,10 @@
 package dev.codecounty.oops.abstraction;
 
+import dev.codecounty.oops.abstraction.interfaces.BankInterface;
+import dev.codecounty.oops.abstraction.interfaces.BankInterfaceImpl;
+
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -22,9 +27,9 @@ public class Main {
         BankAccountAbs ac2 = new BankAccountAbsImpl("Suman", "HDFC78",
                 985652L, AccountType.SAVINGS);
 
-
-        BankAccountAbs ac3 =  new BankAccountAbs("Suman", "HDFC78",
-                985652L, AccountType.SAVINGS){
+        // Anonymous Inner Type
+        BankAccountAbs ac3 = new BankAccountAbs("Suman", "HDFC78",
+                985652L, AccountType.SAVINGS) {
 
             @Override
             void deposit(long... amounts) {//TODO
@@ -36,6 +41,30 @@ public class Main {
 
             }
         };
+
+        //Interfaces
+        BankInterface bankInterface = new BankInterfaceImpl("Suman", 1000, 564552L,
+                "HDFC78", AccountType.SAVINGS);
+
+
+
+        BankInterface ac4 = new BankInterface() {//Annonymous Inner Type
+
+            @Override
+            public void deposit(long... amounts) {
+
+                System.out.println("depositing :" + Arrays.toString(amounts));
+            }
+
+            @Override
+            public void withdraw(long amount) {
+                System.out.println("Withdrawing :" + amount);
+
+
+            }
+        };
+        ac4.withdraw(1000);
+        ac4.deposit(1000, 2000);
 
 
     }
