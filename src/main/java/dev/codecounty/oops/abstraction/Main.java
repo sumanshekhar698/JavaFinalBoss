@@ -9,6 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        String tr = "sumaan  ";
+        tr.trim();
+
         BankAccount ac1 = new BankAccount("Suman", "HDFC78",
                 985652L, AccountType.SAVINGS);
 
@@ -45,7 +48,6 @@ public class Main {
         //Interfaces
         BankInterface bankInterface = new BankInterfaceImpl("Suman", 1000, 564552L,
                 "HDFC78", AccountType.SAVINGS);
-
 
 
         BankInterface ac4 = new BankInterface() {//Annonymous Inner Type

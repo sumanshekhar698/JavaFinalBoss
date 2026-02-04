@@ -13,6 +13,13 @@ public class ModernJavaFeatures {
             System.out.println("Member: " + name);
             System.out.println("Points: " + points); // Variable 'points' is extracted instantly
         }
+
+        Day day = Day.MON;
+        String result = switch (day) {
+            case MON, TUE, WED -> "Work";
+            case SAT, SUN -> "Rest";
+            default -> "Unknown";
+        };
     }
 
     // 2. Unnamed Variables (The '_' underscore)
@@ -33,5 +40,9 @@ public class ModernJavaFeatures {
         
         checkLoyalty(member);
         validateInput("not_a_number");
+    }
+
+    enum Day {
+        MON, TUE, WED, THU, FRI, SAT, SUN
     }
 }

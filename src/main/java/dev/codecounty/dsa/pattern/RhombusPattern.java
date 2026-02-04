@@ -18,7 +18,7 @@ public class RhombusPattern {
                 // 2. Print stars
                 // Every row in a solid rhombus has 'n' stars
                 for (int j = 1; j <= n; j++) {
-                    System.out.print("*");
+                    System.out.print("* ");
                 }
 
                 // 3. Move to the next line
