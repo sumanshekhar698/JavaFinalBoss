@@ -13,22 +13,30 @@ public class Main {
 
         int[] arr = {23, 43, 5, 6, 0};
 
-//        try {
+        try {
             int num = scanner.nextInt();
             System.out.println(10 / arr[num]);
-//        } catch (ArrayIndexOutOfBoundsException e) {
-//            System.out.println("Exception Occurred");
-//            e.printStackTrace();
-//        } catch (ArithmeticException e) {
-//            System.out.println("Exception Occurred");
-//            e.printStackTrace();
-//        } catch (InputMismatchException e) {
-//            System.out.println("Exception Occurred");
-//            e.printStackTrace();
-//        } catch (Exception e) {//Always put the default Exception block at the end
-//            System.out.println("Exception Occurred");
-//            e.printStackTrace();
-//        }
+/*        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception Occurred");
+            e.printStackTrace();
+        } catch (ArithmeticException e) {
+            System.out.println("Exception Occurred");
+            e.printStackTrace();
+        } catch (InputMismatchException e) {
+            System.out.println("Exception Occurred");
+            e.printStackTrace();
+        } catch (Exception e) {//Always put the default Exception block at the end
+            System.out.println("Exception Occurred");
+            e.printStackTrace();
+        }*/
+        } catch (ArrayIndexOutOfBoundsException | ArithmeticException | InputMismatchException e) {
+            System.out.println("Exception Occurred");
+            e.printStackTrace();
+        }
+        catch (Exception e) {//Always put the default Exception block at the end
+            System.out.println("Exception Occurred");
+            e.printStackTrace();
+        }
 
 
         System.out.println("END");
