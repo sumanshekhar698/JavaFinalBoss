@@ -1,4 +1,4 @@
-package dev.codecounty.deep.int_objects;
+package dev.codecounty.deep.edge_cases;
 
 public class IntegerObjects {
 

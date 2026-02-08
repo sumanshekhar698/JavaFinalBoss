@@ -1,4 +1,4 @@
-package dev.codecounty.deep.int_objects;
+package dev.codecounty.deep.edge_cases;
 
 public class DoubleObjects {
 
@@ -18,15 +18,15 @@ public class DoubleObjects {
 
 
         /*
-        *
-        * Float and Double do not have a cache.
-        * Why? Because between any two integers (like 1 and 2), there are an infinite number of floating-point values
-        *
-        *   (1.1, 1.01, 1.001...). Caching them would be impossible and wouldn't provide any performance benefit.
-        *
-        *
-        *
-        * */
+         *
+         * Float and Double do not have a cache.
+         * Why? Because between any two integers (like 1 and 2), there are an infinite number of floating-point values
+         *
+         *   (1.1, 1.01, 1.001...). Caching them would be impossible and wouldn't provide any performance benefit.
+         *
+         *
+         *
+         * */
         Double d1 = 1.0;
         Double d2 = 1.0;
         System.out.println(d1 == d2); // Always FALSE
@@ -37,11 +37,11 @@ public class DoubleObjects {
 
 
         /*
-        * Boolean is the simplest. Since there are only two possible values,
-        *  Java just creates two static objects: Boolean.TRUE and Boolean.FALSE.
-        *  Every time you box a boolean, you're just pointing to one of those two.
-        *
-        * */
+         * Boolean is the simplest. Since there are only two possible values,
+         *  Java just creates two static objects: Boolean.TRUE and Boolean.FALSE.
+         *  Every time you box a boolean, you're just pointing to one of those two.
+         *
+         * */
         System.out.println(Boolean.TRUE == Boolean.TRUE);
 
         /*The Golden Rule: Whenever you are dealing with Wrapper classes (Integer, Long, etc.), always use .equals().*/
