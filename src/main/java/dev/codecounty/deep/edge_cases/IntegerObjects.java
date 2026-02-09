@@ -24,5 +24,6 @@ public class IntegerObjects {
         Integer x = 200;
         Integer y = 200;
         System.out.println(x == y); // Prints FALSE (They are two different objects on the heap)
+        System.out.println(x.equals(y));
     }
 }
