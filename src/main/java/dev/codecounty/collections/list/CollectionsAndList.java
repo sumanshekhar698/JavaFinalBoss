@@ -2,6 +2,7 @@ package dev.codecounty.collections.list;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class CollectionsAndList {
 
@@ -34,10 +35,23 @@ public class CollectionsAndList {
 
         ArrayList<Student> listOfStudents = new ArrayList<>();
         listOfStudents.add(new Student("John", 20));
-        listOfStudents.add(new Student("Jane", 21));
         listOfStudents.add(new Student("Jack", 22));
+        listOfStudents.add(new Student("Jane", 21));
         listOfStudents.add(new Student("Jill", 23));
-//        Collections.sort(listOfStudents);
+        listOfStudents.stream().forEach(System.out::println);
+
+        // 2. Using Comparator Implementation
+//        Collections.sort(listOfStudents, new NameComparator());
+
+//        3. Using Lambda fn
+//        Collections.sort(listOfStudents,
+//                (st1, st2) -> st1.name.compareTo(st2.name));
+
+//        4. Using comparing fn
+        Collections.sort(listOfStudents,
+                Comparator.comparing(st -> st.name));
+        System.out.println();
+        listOfStudents.stream().forEach(System.out::println);
 
 
     }
@@ -45,7 +59,7 @@ public class CollectionsAndList {
 
 }
 
-class Student {
+class Student implements Comparable<Student> {//1. Modify the Student class
     String name;
     int age;
 
@@ -56,5 +70,26 @@ class Student {
 
     public String toString() {
         return name + " " + age;
+    }
+
+    @Override
+    public int compareTo(Student st1) {
+        if (st1.age == this.age) {
+            return 0;
+        } else if (st1.age < this.age) {
+            return 1;
+        } else {
+            return -1;
+        }
+
+    }
+}
+
+//2. Using Comparator
+class NameComparator implements Comparator<Student> {
+
+    @Override
+    public int compare(Student st1, Student st2) {
+        return -st1.name.compareTo(st2.name);
     }
 }
