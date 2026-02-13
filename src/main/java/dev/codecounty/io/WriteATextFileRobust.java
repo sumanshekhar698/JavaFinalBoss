@@ -17,7 +17,10 @@ public class WriteATextFileRobust {
                 """;
 
         if (path.exists() && path.isFile()) {
-            try (FileOutputStream fos = new FileOutputStream(path);) {
+            try (FileOutputStream fos = new FileOutputStream(path, true);) {//append = true means
+                // it will start appending instead of replacing
+
+//            try (FileOutputStream fos = new FileOutputStream(path);) {
                 fos.write(msg.getBytes());
 
 
