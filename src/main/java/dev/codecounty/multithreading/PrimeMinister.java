@@ -1,4 +1,4 @@
-package dev.codecounty.design.patterns;
+package dev.codecounty.multithreading;
 
 public class PrimeMinister {
 
