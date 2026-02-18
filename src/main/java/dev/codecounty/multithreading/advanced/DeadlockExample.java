@@ -2,6 +2,12 @@ package dev.codecounty.multithreading.advanced;
 
 public class DeadlockExample {
 	public static void main(String[] args) {
+
+
+
+
+
+
 		final String resource1 = "Bowl";
 		final String resource2 = "Spoon";
 

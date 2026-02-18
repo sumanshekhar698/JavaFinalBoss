@@ -20,6 +20,7 @@ public class RaceCondition {
 
 
     public void incrementCounter() {
+//  synchronized   public void incrementCounter() {// to fix thi racing, we can synchronize the method
         counter++; // Read current value, increment, then write back
     }
 
@@ -27,8 +28,18 @@ public class RaceCondition {
 
         RaceCondition raceCondition = new RaceCondition();
         // Create two threads
-        Thread thread1 = new Thread(() -> raceCondition.incrementCounter());
-        Thread thread2 = new Thread(() -> raceCondition.incrementCounter());
+        Thread thread1 = new Thread(() -> {
+            for (int i = 0; i < 10000; i++)
+
+                raceCondition.incrementCounter();
+        });
+
+        Thread thread2 = new Thread(() -> {
+            for (int i = 0; i < 10000; i++)
+
+                raceCondition.incrementCounter();
+        });
+
 
         // Start both threads
         thread1.start();
