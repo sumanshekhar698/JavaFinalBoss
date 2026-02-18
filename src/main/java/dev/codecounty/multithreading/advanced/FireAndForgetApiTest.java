@@ -10,7 +10,7 @@ public class FireAndForgetApiTest {
 
     public static void main(String[] args) {
 
-        CompletableFuture.runAsync(() -> callPublicApi());
+        CompletableFuture.runAsync(FireAndForgetApiTest::callPublicApi);
 
         System.out.println("API call triggered (fire-and-forget).");
 

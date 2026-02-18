@@ -1,4 +1,4 @@
-package dev.codecounty.multithreading.advanced;
+package dev.codecounty.multithreading;
 class Counter {
     private int count = 0;
 

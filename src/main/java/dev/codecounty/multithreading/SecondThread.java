@@ -1,9 +1,9 @@
-package dev.codecounty.multithreading.advanced;
+package dev.codecounty.multithreading;
 
 public class SecondThread {
 
 	public static void main(String[] args) {
-		Thread t1 = new Thread(new Work());
+		Thread t1 = new Thread(new Work2());
 		t1.start();
 //		t1.start();
 		

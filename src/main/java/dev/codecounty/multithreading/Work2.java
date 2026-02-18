@@ -1,6 +1,6 @@
 package dev.codecounty.multithreading;
 
-public class Work implements Runnable {
+public class Work2 implements Runnable {
     @Override
     public void run() {//Work
 

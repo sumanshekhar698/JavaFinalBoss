@@ -24,12 +24,12 @@ public class Main {
         t2.setPriority(Thread.MIN_PRIORITY);
         t2.start();
 
-        Thread t3 = new Thread(new Work());
+        Thread t3 = new Thread(new Work2());
         t3.setName("t3");
         t3.setPriority(Thread.NORM_PRIORITY);
         t3.start();
 
-        Thread t4 = new Thread(new Work());
+        Thread t4 = new Thread(new Work2());
         t4.setName("t4");
         t4.setPriority(2);
         t4.start();

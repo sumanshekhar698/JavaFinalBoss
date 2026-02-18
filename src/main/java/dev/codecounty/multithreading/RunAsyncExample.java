@@ -1,4 +1,4 @@
-package dev.codecounty.multithreading.advanced;
+package dev.codecounty.multithreading;
 
 import java.util.concurrent.CompletableFuture;
 

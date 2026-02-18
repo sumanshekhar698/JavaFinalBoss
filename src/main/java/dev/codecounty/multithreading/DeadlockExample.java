@@ -1,4 +1,4 @@
-package dev.codecounty.multithreading.advanced;
+package dev.codecounty.multithreading;
 
 public class DeadlockExample {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package dev.codecounty.multithreading.advanced;
+package dev.codecounty.multithreading;
 public class DeadlockFixed {
     public static void main(String[] args) {
         final String resource1 = "Bowl";
