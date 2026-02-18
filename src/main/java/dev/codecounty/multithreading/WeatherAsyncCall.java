@@ -10,14 +10,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
-
-
-
-
-
-
-
-
 public class WeatherAsyncCall {
 
     public static void main(String[] args) {
@@ -41,7 +33,7 @@ public class WeatherAsyncCall {
                     }
                 }, executor)
                 .whenComplete((res, ex) -> executor.shutdown());
-
+// Background threads from runAsync() (ForkJoinPool) may not complete in case you are not passing your executors
 //        future.join();      // wait for completion
 //        executor.shutdown();
 
